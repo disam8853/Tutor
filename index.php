@@ -7,104 +7,69 @@
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-<!--     <script src="https://cdn.staticfile.org/jquery/3.2.1/jquery.min.js"></script>
-    <script src="https://cdn.staticfile.org/popper.js/1.15.0/umd/popper.min.js"></script>
-    <script src="https://cdn.staticfile.org/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
- -->
-    <title>DataBaseTutor</title>
+
+<style>
+  .jumbotron {
+    background: 
+    linear-gradient(
+      rgba(0, 0, 250, 0.25), 
+      rgba(125, 250, 250, 0.45)
+    ),
+    url("./giraffe.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+    min-height: 100vh;
+    color: whitesmoke !important;
+  }
+
+  .push-down {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  .heading {
+    font-size: 10vmax;
+    text-shadow: 0.5vmax 0.5vmax 5px #4B0082;
+    mix-blend-mode: screen;
+    animation: fadeIn 2.4s linear forwards;
+  }
+
+  @keyframes fadeIn {
+      0% {
+          opacity: 0
+      }
+
+      100% {
+          opacity: 1;
+      }
+  }
+</style>
+
   </head>
-  <body id = "top" background="giraffe.jpg">
-    <div class="img-thumbnail">
-      <div class="text-center">
-        <h1>
-          DBTutor<h5><kbd>team seven</kbd></h5>
-        </h1>
+  <body>
+
+    <div class="jumbotron jumbotron-fluid">
+      <div class="container text-center push-down">
+        <div class="title">
+          <h1 class="heading">Tutor</h1>
+        </div>
+        <h5><kbd>team seven</kbd></h5>
+        <p class="lead my-5">台大學生設計的家教媒合網站</p>
+
+        <div class="row justify-content-center">
+          <a href="regU.php" type="button" class="btn btn-outline-light m-1">Register User</a>
+          <a href="regS.php" type="button" class="btn btn-outline-light m-1">Register Student</a>
+          <a href="regT.php" type="button" class="btn btn-outline-light m-1">Register Teacher</a>
+          <a href="login.php" type="button" class="btn btn-outline-light m-1">Login</a>
+        </div>
       </div>
     </div>
-    <h1>
-      <div class="dropdown">
-        <div class="container-sm mt-3">
-          <div class="btn btn-secondary btn-lg btn-block">
-            <button type="button" class="btn btn-secondary dropdown-toggle"   data-toggle="dropdown">
-              Enter DB Tutor
-            </button>
-            <div class="dropdown-menu">
-              <div class="btn btn-secondary btn-lg btn-block">
-                <a class="dropdown-item" href="regU.php">Register User</a>
-              </div>
-              <div class="btn btn-secondary btn-lg btn-block">
-                <a class="dropdown-item" href="regS.php">Register Student</a>
-              </div>
-              <div class="btn btn-secondary btn-lg btn-block">
-                <a class="dropdown-item" href="regT.php">Register Teacher</a>
-              </div>
-              <div class="btn btn-secondary btn-lg btn-block">
-                <a class="dropdown-item" href="login.php">Login</a>     
-            </div>
-          </div>
-        </div>
-      </div>
-      <!-- <div class= "container-sm mt-3" class="img-thumbnail">
-        <div class="row">
-          <div class="col">
-            <a href = "https://getbootstrap.com/docs/4.4/components/buttons/">
-              <button type="button" class="btn btn-secondary btn-lg btn-block">註冊</button>
-            </a>
-          </div>
-          <div class="col">
-            <a href = "https://getbootstrap.com/docs/4.4/components/buttons/">
-              <button type="button" class="btn btn-primary btn-lg btn-block">登入</button>
-            </a>
-          </div>
-        </div>
-      </div> -->
-    <!-- </h1> 
-    <h2>
-      <div class="container-sm mt-4">
-        <div class="row">
-          <div class="col-sm-6">
-            <div class="card">
-              <div class="card-body">
-                <h5 class="card-title">選擇地區</h5>
-                <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-                <a href="#" class="btn btn-primary">Go somewhere</a>
-              </div>
-            </div>
-          </div>
-          <div class="col-sm-6">
-            <div class="card">
-              <div class="card-body">
-                <h5 class="card-title">選擇科目</h5>
-                <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-                <a href="#" class="btn btn-primary">Go somewhere</a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="container-sm mt-4">
-        <div class="row">
-          <div class="col-sm-6">
-            <div class="card">
-              <div class="card-body">
-                <h5 class="card-title">選擇時段</h5>
-                <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-                <a href="#" class="btn btn-primary">Go somewhere</a>
-              </div>
-            </div>
-          </div>
-          <div class="col-sm-6">
-            <div class="card">
-              <div class="card-body">
-                <h5 class="card-title">選擇對象</h5>
-                <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-                <a href="#" class="btn btn-primary">Go somewhere</a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </h2> -->
+
+
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
