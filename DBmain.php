@@ -22,47 +22,11 @@
       </div>
     </div>
     <h1>
-      <!-- <div class="dropdown">
-        <div class="container-sm mt-3">
-          <div class="btn btn-secondary btn-lg btn-block">
-            <button type="button" class="btn btn-secondary dropdown-toggle"   data-toggle="dropdown">
-              Enter DB Tutor
-            </button>
-            <div class="dropdown-menu">
-              <div class="btn btn-secondary btn-lg btn-block">
-                <a class="dropdown-item" href="regU.html">Register User</a>
-              </div>
-              <div class="btn btn-secondary btn-lg btn-block">
-                <a class="dropdown-item" href="regS.html">Register Student</a>
-              </div>
-              <div class="btn btn-secondary btn-lg btn-block">
-                <a class="dropdown-item" href="regT.html">Register Teacher</a>
-              </div>
-              <div class="btn btn-secondary btn-lg btn-block">
-                <a class="dropdown-item" href="login.html">Login</a>     
-            </div>
-          </div>
-        </div>
-      </div> -->
-      <!-- <div class= "container-sm mt-3" class="img-thumbnail">
-        <div class="row">
-          <div class="col">
-            <a href = "https://getbootstrap.com/docs/4.4/components/buttons/">
-              <button type="button" class="btn btn-secondary btn-lg btn-block">註冊</button>
-            </a>
-          </div>
-          <div class="col">
-            <a href = "https://getbootstrap.com/docs/4.4/components/buttons/">
-              <button type="button" class="btn btn-primary btn-lg btn-block">登入</button>
-            </a>
-          </div>
-        </div>
-      </div> -->
+
     </h1> 
     <h2>
       <form action="DBmaindb.php" method="post">
-                <!-- <div class="text-white">
- -->
+
                   <div class="container-sm mt-4">
                     <div class="row">
                       <div class="col-sm-6">

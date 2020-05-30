@@ -29,7 +29,7 @@ if($st === 'S')
 	}
 	else
 	{
-		echo $mysqli->error;
+			echo $mysqli->error;
 	    echo '新增失敗!';
 	    echo '<meta http-equiv=REFRESH CONTENT=2;url=afterlogin.php>';
 	}
@@ -52,6 +52,7 @@ else if($st === 'T')
 	}
 	else
 	{
+			echo $mysqli->error;
 	    echo '新增失敗!';
 	    echo '<meta http-equiv=REFRESH CONTENT=2;url=afterlogin.php>';
 	}
