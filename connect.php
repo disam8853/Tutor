@@ -10,6 +10,7 @@ $db_passwd = "XD221165";
 
 $mysqli = new mysqli("localhost", "root", "XD221165", "mydb");
 
+
 if ($mysqli -> connect_error) {
     die("連線失敗: " . $mysqli->connect_error);
 }
