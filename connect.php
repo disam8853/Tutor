@@ -6,9 +6,9 @@ $db_name = "mydb";
 
 $db_user = "root";
 
-$db_passwd = "XD221165";
+$db_passwd = "1230";
 
-$mysqli = new mysqli("localhost", "root", "XD221165", "mydb");
+$mysqli = new mysqli("localhost", "root", "1230", "mydb");
 
 
 if ($mysqli -> connect_error) {
