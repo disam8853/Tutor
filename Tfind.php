@@ -90,97 +90,7 @@ if ($result = $mysqli -> query($sql)) {
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>TutorTfind</title>
-<style>
-  .jumbotron {
-    background: 
-    linear-gradient(
-      rgba(0, 0, 250, 0.25), 
-      rgba(125, 250, 250, 0.45)
-    ),
-    url("./giraffe.jpg");
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-position: center;
-    background-size: cover;
-    min-height: 100vh;
-    color: whitesmoke !important;
-  }
-
-  .push-down {
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
-  }
-
-  .heading {
-    font-size: 10vmax;
-    text-shadow: 0.5vmax 0.5vmax 5px #4B0082;
-    mix-blend-mode: screen;
-    animation: fadeIn 2.4s linear forwards;
-  }
-
-  @keyframes fadeIn {
-      0% {
-          opacity: 0
-      }
-
-      100% {
-          opacity: 1;
-      }
-  }
-
-  .navbar {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    color: whitesmoke !important;
-    background-color: rgba(0,0,0,0);
-  }
-
-  .nav-link.active {
-    color: Silver !important;
-    border-bottom: 2px solid;
-  }
-
-  .text-color {
-    color: whitesmoke !important;
-  }
-
-  .bgc-transparent {
-    background-color: rgba(0,0,0,0.4);
-  }
-
-  table {
-    border-radius: 10px;
-  }
-
-  .table td, .table th {
-    border-top: 1px solid rgba(222,226,230, 0.6);
-  }
-
-  .table thead th {
-    border-bottom: 2px solid rgba(222,226,230, 0.6);
-  }
-
-  .checkbox {
-    width: 23px;
-    height: 23px;
-    cursor: pointer;
-    background: rgba(250,250,250,0.5);
-    color:black;
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    appearance: none;
-    border: none;
-    border-radius: 3px;
-  }
-
-  td {
-    position: relative;
-  }
-</style>
+    <link rel="stylesheet" href="./style.css">
   </head>
   <body>
     <nav class="navbar navbar-expand-sm navbar-dark px-5">
@@ -199,7 +109,7 @@ if ($result = $mysqli -> query($sql)) {
           </li>
         </ul>
 
-        <button data-toggle="modal" data-target="#login" href="login.php" type="button" class="btn btn-outline-light mt-2 m-sm-3 btn-lg">Login</button>
+        <a href="logout_db.php" type="button" class="btn btn-outline-light mt-2 m-sm-3 btn-lg">logout</a>
       </div>
     </nav>
 
@@ -276,9 +186,6 @@ if ($result = $mysqli -> query($sql)) {
 
       </div>
     </div>
-
-
-
 
 
 

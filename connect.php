@@ -8,7 +8,8 @@ $db_user = "root";
 
 $db_passwd = "1230";
 
-$mysqli = new mysqli("localhost", "root", "1230", "mydb");
+// $mysqli = new mysqli("localhost", "root", "1230", "mydb");
+$mysqli = new mysqli("127.0.0.1", "root", "a19929912", "mydb");
 
 
 if ($mysqli -> connect_error) {

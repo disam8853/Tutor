@@ -1,30 +1,9 @@
-<!doctype html>
-<html lang="en">
-  <head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>DataBaseTfind</title>
-  </head>
-  <body id = "top" background="giraffe.jpg">
-      	
-  <div class="img-thumbnail">
-      <div class="text-center">
-        <h1>
-          DBTutor<h5><kbd>team seven</kbd></h5>
-        </h1>
-      </div>
-    </div>
-
 <?php
-
 session_start();
+
 include("connect.php");
 
+$table_text = "";
 $chk = $_POST['chk'];
 if(isset($_SESSION['teachername']))
 {
@@ -46,34 +25,15 @@ if(isset($_SESSION['teachername']))
     $result = $mysqli->query($sql);
     $row = $result->fetch_row();
 
-    echo "<div class='text-white'>";
-    echo "<div class='container'>";
-    echo "<h5>&nbsp<h5>";
-    echo "<h2><kbd>Teacher Information</kbd></h2>";
-    echo "<table class='table table-striped'>";
-    echo "<thead>";
-    echo "<tr class='table-light'>";
-    echo "<th>Teacher's seniority</th>";
-    echo "<th>Education</th>";
-    echo "<th>Name</th>";
-    echo "<th>Sex</th>";
-    echo "<th>Age</th>";
-    echo "<th>Mail</th>";
-    echo "</tr>";
-    echo "</thead>";
-    echo "<tbody>";
-    echo "<tr class='table-light'>";
-    echo "<td>$seniority</td>";
-    echo "<td>$edu</td>";
-    echo "<td>$row[0]</td>";
-    echo "<td>$row[1]</td>";
-    echo "<td>$row[2]</td>";
-    echo "<td>$row[3]</td>";
-    echo "</tr>";
-    echo "</tbody>";
-    echo "</table>";
-    echo "</div>";
-    echo "</div>";
+    $table_text .= "<tr>";
+    $table_text .= "<td>$seniority</td>";
+    $table_text .= "<td>$edu</td>";
+    $table_text .= "<td>$row[0]</td>";
+    $table_text .= "<td>$row[1]</td>";
+    $table_text .= "<td>$row[2]</td>";
+    $table_text .= "<td>$row[3]</td>";
+    $table_text .= "</tr>";
+
     $result -> free_result();
   }
   else
@@ -83,6 +43,72 @@ if(isset($_SESSION['teachername']))
 
 }
 ?>
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>DataBaseTfind</title>
+    <link rel="stylesheet" href="./style.css">
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-sm navbar-dark px-5">
+      <a class="navbar-brand text-color" href="#">Tutor</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon text-color"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item">
+            <a class="nav-link text-color" href="./index.php">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active text-color" href="afterlogin.php">Dashboard <span class="sr-only">(current)</span></a>
+          </li>
+        </ul>
+
+        <a href="logout_db.php" type="button" class="btn btn-outline-light mt-2 m-sm-3 btn-lg">logout</a>
+      </div>
+    </nav>
+
+    <div class="jumbotron jumbotron-fluid">
+      <div class="container text-center push-down">
+        <div class="title">
+          <h1 class="heading">Tutor</h1>
+        </div>
+        <h5><kbd>team seven</kbd></h5>
+
+        <div class="row justify-content-center mt-5">
+
+          <table class='table table-striped bgc-transparent text-color'>
+            <thead>
+              <tr>
+                <th>Teacher's seniority</th>
+                <th>Education</th>
+                <th>Name</th>
+                <th>Sex</th>
+                <th>Age</th>
+                <th>Mail</th>
+              </tr>
+            </thead>
+            <tbody>
+              <?=$table_text?>
+            </tbody>
+          </table>
+
+        </div>
+
+        <div class="row justify-content-center">
+          <a href="afterlogin.php" type="button" class="btn btn-outline-light m-1">Go Back</a>
+        </div>
+      </div>
+    </div>
     
 
 

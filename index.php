@@ -14,66 +14,8 @@
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-
-<style>
-  .jumbotron {
-    background: 
-    linear-gradient(
-      rgba(0, 0, 250, 0.25), 
-      rgba(125, 250, 250, 0.45)
-    ),
-    url("./giraffe.jpg");
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-position: center;
-    background-size: cover;
-    min-height: 100vh;
-    color: whitesmoke !important;
-  }
-
-  .push-down {
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
-  }
-
-  .heading {
-    font-size: 10vmax;
-    text-shadow: 0.5vmax 0.5vmax 5px #4B0082;
-    mix-blend-mode: screen;
-    animation: fadeIn 2.4s linear forwards;
-  }
-
-  @keyframes fadeIn {
-      0% {
-          opacity: 0
-      }
-
-      100% {
-          opacity: 1;
-      }
-  }
-
-  .navbar {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    color: whitesmoke !important;
-    background-color: rgba(0,0,0,0);
-  }
-
-  .nav-link.active {
-    color: Silver !important;
-    border-bottom: 2px solid;
-  }
-
-  .text-color {
-    color: whitesmoke !important;
-  }
-</style>
-
+    <title>Tutor</title>
+    <link rel="stylesheet" href="./style.css">
   </head>
   <body>
     <nav class="navbar navbar-expand-sm navbar-dark px-5">
@@ -198,7 +140,7 @@
   </div>
 </form>
 
-<form action="teacher.php" method="post">
+<form action="teacher_db.php" method="post">
   <div class="modal fade" id="regT" tabindex="-1" role="dialog" aria-labelledby="m3" aria-hidden="true">
     <div class="modal-dialog">
       <div class="modal-content">
