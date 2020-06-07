@@ -52,7 +52,12 @@ if ($result = $mysqli -> query($sql)) {
   $result -> free_result();
 }
 
-$sql = "SELECT * FROM S_case_table";
+if ($_GET['query']) {
+  $sql = "SELECT * FROM S_case_table WHERE Subject = '".$_GET['query']."'";
+}
+else {
+  $sql = "SELECT * FROM S_case_table";
+}
 $result = $mysqli->query($sql);
 if ($result = $mysqli -> query($sql)) {
   $count = 0;
@@ -166,9 +171,34 @@ if ($result = $mysqli -> query($sql)) {
             <thead>
               <tr>
                 <th>Student ID</th>
-                <th>region</th>
-                <th>subject</th>
-                <th>time</th>
+                <th>Region</th>
+                <th>
+                  <div class="dropdown">
+                    <a class="search" href="#" role="button" id="searchDropDown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                      Subject
+                    </a>
+
+                    <div class="dropdown-menu" aria-labelledby="searchDropDown">
+                      <a class="dropdown-item" href="#">ALL</a>
+                      <a class="dropdown-item" href="./Tfind.php?query=Chinese">Chinese</a>
+                      <a class="dropdown-item" href="./Tfind.php?query=English">English</a>
+                      <a class="dropdown-item" href="./Tfind.php?query=Math">Math</a>
+                      <a class="dropdown-item" href="./Tfind.php?query=Programming">Programming</a>
+                      <a class="dropdown-item" href="./Tfind.php?query=History">History</a>
+                      <a class="dropdown-item" href="./Tfind.php?query=Sciense">Sciense</a>
+                      <!-- <div class="dropdown-divider"></div>
+                      <div class="dropdown-item">
+                        <form class="form-inline">
+                          <div class="form-group mb-0">
+                            <input type="text" id="searchInput" class="form-control px-0" placeholder="Others...">
+                          </div>
+                          <button type="submit" class="btn btn-success">Go</button>
+                        </form>
+                      </div> -->
+                    </div>
+                  </div>
+                </th>
+                <th>Time</th>
                 <th>Check</th>
                 <th>Accept</th>
               </tr>
@@ -200,6 +230,10 @@ if ($result = $mysqli -> query($sql)) {
     $(".acp").click(function(){
       $(this).next().submit();
     });
+
+    // $('#searchInput').click(function(){
+    //   window.location.replace("./Tfind.php");
+    // })
   </script>
   </body>
 </html>

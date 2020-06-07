@@ -14,7 +14,12 @@ $table1_text = "";
 $table2_text = "";
 $table3_text = "";
 
-$sql = "SELECT * FROM T_case_table";
+if ($_GET['query']) {
+  $sql = "SELECT * FROM T_case_table WHERE Subject = '".$_GET['query']."'";
+}
+else {
+  $sql = "SELECT * FROM T_case_table";
+}
 $result = $mysqli->query($sql);
 if ($result = $mysqli -> query($sql)) {
   $count = 0;
@@ -164,7 +169,23 @@ if ($result = $mysqli -> query($sql)){
               <tr>
                 <th>Teacher ID</th>
                 <th>Region</th>
-                <th>Subject</th>
+                <th>
+                  <div class="dropdown">
+                    <a class="search" href="#" role="button" id="searchDropDown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                      Subject
+                    </a>
+
+                    <div class="dropdown-menu" aria-labelledby="searchDropDown">
+                      <a class="dropdown-item" href="./Sfind.php">ALL</a>
+                      <a class="dropdown-item" href="./Sfind.php?query=Chinese">Chinese</a>
+                      <a class="dropdown-item" href="./Sfind.php?query=English">English</a>
+                      <a class="dropdown-item" href="./Sfind.php?query=Math">Math</a>
+                      <a class="dropdown-item" href="./Sfind.php?query=Programming">Programming</a>
+                      <a class="dropdown-item" href="./Sfind.php?query=History">History</a>
+                      <a class="dropdown-item" href="./Sfind.php?query=Sciense">Sciense</a>
+                    </div>
+                  </div>
+                </th>
                 <th>Time</th>
                 <th>Check</th>
                 <th>Accept</th>
